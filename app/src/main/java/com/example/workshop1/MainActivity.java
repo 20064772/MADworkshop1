@@ -41,15 +41,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Editable editable = input1.getText();
-                String str = editable.toString();
-                double inputNumber1 = Double.parseDouble(str);
-
+                String str1 = editable.toString();
                 editable = input2.getText();
-                str = editable.toString();
-                double inputNumber2 = Double.parseDouble(str);
+                String str2 = editable.toString();
+
+                if (str1.isEmpty() || str2.isEmpty()){
+                    result.setText("Please Enter 2 numbers");
+                }
+                else{
+
+                double inputNumber1 = Double.parseDouble(str1);
+                double inputNumber2 = Double.parseDouble(str2);
 
                 double numberResult = inputNumber1 + inputNumber2;
                 result.setText(Double.toString(numberResult));
+                }
 
             }
         });
@@ -59,16 +65,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Editable editable = input1.getText();
-                String str = editable.toString();
-                double inputNumber1 = Double.parseDouble(str);
-
+                String str1 = editable.toString();
                 editable = input2.getText();
-                str = editable.toString();
-                double inputNumber2 = Double.parseDouble(str);
+                String str2 = editable.toString();
 
-                double numberResult = inputNumber1 - inputNumber2;
-                result.setText(Double.toString(numberResult));
+                if (str1.isEmpty() || str2.isEmpty()) {
+                    result.setText("Please Enter 2 numbers");
+                } else {
 
+                    double inputNumber1 = Double.parseDouble(str1);
+                    double inputNumber2 = Double.parseDouble(str2);
+
+                    double numberResult = inputNumber1 - inputNumber2;
+                    result.setText(Double.toString(numberResult));
+                }
             }
         });
 
@@ -78,15 +88,20 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Editable editable = input1.getText();
-                String str = editable.toString();
-                double inputNumber1 = Double.parseDouble(str);
-
+                String str1 = editable.toString();
                 editable = input2.getText();
-                str = editable.toString();
-                double inputNumber2 = Double.parseDouble(str);
+                String str2 = editable.toString();
 
-                double numberResult = inputNumber1 * inputNumber2;
-                result.setText(Double.toString(numberResult));
+                if (str1.isEmpty() || str2.isEmpty()) {
+                    result.setText("Please Enter 2 numbers");
+                } else {
+
+                    double inputNumber1 = Double.parseDouble(str1);
+                    double inputNumber2 = Double.parseDouble(str2);
+
+                    double numberResult = inputNumber1 * inputNumber2;
+                    result.setText(Double.toString(numberResult));
+                }
 
             }
         });
@@ -96,15 +111,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Editable editable = input1.getText();
-                String str = editable.toString();
-                double inputNumber1 = Double.parseDouble(str);
-
+                String str1 = editable.toString();
                 editable = input2.getText();
-                str = editable.toString();
-                double inputNumber2 = Double.parseDouble(str);
+                String str2 = editable.toString();
 
-                double numberResult = inputNumber1 / inputNumber2;
-                result.setText(Double.toString(numberResult));
+                if (str1.isEmpty() || str2.isEmpty()) {
+                    result.setText("Please Enter 2 numbers");
+                } else {
+
+                    double inputNumber1 = Double.parseDouble(str1);
+                    double inputNumber2 = Double.parseDouble(str2);
+
+                    double numberResult = inputNumber1 / inputNumber2;
+                    result.setText(Double.toString(numberResult));
+                }
 
             }
         });
