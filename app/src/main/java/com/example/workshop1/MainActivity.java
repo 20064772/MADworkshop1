@@ -45,18 +45,16 @@ public class MainActivity extends AppCompatActivity {
                 editable = input2.getText();
                 String str2 = editable.toString();
 
-                if (str1.isEmpty() || str2.isEmpty()){
-                    result.setText("Please Enter 2 numbers");
+                try {
+                    double inputNumber1 = Double.parseDouble(str1);
+                    double inputNumber2 = Double.parseDouble(str2);
+
+                    double numberResult = inputNumber1 + inputNumber2;
+                    result.setText(Double.toString(numberResult));
                 }
-                else{
-
-                double inputNumber1 = Double.parseDouble(str1);
-                double inputNumber2 = Double.parseDouble(str2);
-
-                double numberResult = inputNumber1 + inputNumber2;
-                result.setText(Double.toString(numberResult));
+                catch (NumberFormatException e){
+                    result.setText("Enter 2 numbers");
                 }
-
             }
         });
 
@@ -69,15 +67,15 @@ public class MainActivity extends AppCompatActivity {
                 editable = input2.getText();
                 String str2 = editable.toString();
 
-                if (str1.isEmpty() || str2.isEmpty()) {
-                    result.setText("Please Enter 2 numbers");
-                } else {
-
+                try{
                     double inputNumber1 = Double.parseDouble(str1);
                     double inputNumber2 = Double.parseDouble(str2);
 
                     double numberResult = inputNumber1 - inputNumber2;
                     result.setText(Double.toString(numberResult));
+                }
+                catch (NumberFormatException e){
+                    result.setText("Enter 2 numbers");
                 }
             }
         });
@@ -92,15 +90,15 @@ public class MainActivity extends AppCompatActivity {
                 editable = input2.getText();
                 String str2 = editable.toString();
 
-                if (str1.isEmpty() || str2.isEmpty()) {
-                    result.setText("Please Enter 2 numbers");
-                } else {
-
+                try {
                     double inputNumber1 = Double.parseDouble(str1);
                     double inputNumber2 = Double.parseDouble(str2);
 
                     double numberResult = inputNumber1 * inputNumber2;
                     result.setText(Double.toString(numberResult));
+                }
+                catch (NumberFormatException e){
+                    result.setText("Enter 2 numbers");
                 }
 
             }
@@ -115,17 +113,16 @@ public class MainActivity extends AppCompatActivity {
                 editable = input2.getText();
                 String str2 = editable.toString();
 
-                if (str1.isEmpty() || str2.isEmpty()) {
-                    result.setText("Please Enter 2 numbers");
-                } else {
-
+                try {
                     double inputNumber1 = Double.parseDouble(str1);
                     double inputNumber2 = Double.parseDouble(str2);
 
                     double numberResult = inputNumber1 / inputNumber2;
                     result.setText(Double.toString(numberResult));
                 }
-
+                catch (NumberFormatException e){
+                    result.setText("Enter 2 numbers");
+                }
             }
         });
     }
